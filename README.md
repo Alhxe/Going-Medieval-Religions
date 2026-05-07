@@ -1,72 +1,65 @@
-# Christianity Expanded
+# Religions Expanded
 
-A content mod for [Going Medieval](https://store.steampowered.com/app/1029780/) that expands the in-game Christian religion with new buildings, items, rooms and research.
+A religion framework mod for [Going Medieval](https://store.steampowered.com/app/1029780/). Adds new buildings, items, rooms, research and rituals around the existing religions, and provides the runtime hooks for adding more religions in future versions.
 
-> **Status**: alpha (0.1.0). JSON content done; meshes / textures pending.
+> **Status**: alpha (0.2.0). JSON content in place; BepInEx plugin renames the two vanilla religions and lays the groundwork for a multi-religion selector.
 
-## Why "Christianity Expanded" and not "more religions"?
+## What's in 0.2.0
 
-Going Medieval's religion system is hard-coded to a **bipolar 0–100 axis**: 0–49 Pagan ("Followers of the Oak"), 50–100 Christian ("Restitutionist"). Adding a third religion would require code patches against `Assembly-CSharp.dll` (BepInEx + Harmony). We chose to stay within JSON / asset modding for now and pour effort into making the existing Christian religion *much* richer.
+### JSON content (Christianity expansion)
+- **Buildings**: floor cross, wall crucifix, wooden pew, padded pew, grand altar, confessional, bell tower, three religious paintings (Christ / Mary / Saint), three stained-glass windows.
+- **Items**: bible, portable crucifix, consecrated wine.
+- **Rooms**: church (mid-tier), cathedral (top-tier — replaces the dormant vanilla `advanced_chapel_christian`), bell tower.
+- **Research**: `liturgy` (unlocks the church and most decorations) and `cathedral_architecture` (unlocks cathedral, grand altar, stained glass, bell tower). Both wired into the vanilla research tree under `religious_structures_lvl3` via `nextNodesIDs` override.
+- **Religion config**: appends `grand_altar_christian` to the Christian shrine list and registers `church_christian` / `cathedral_christian` as Christian room types via `#APPEND`.
+- **Localization**: bilingual EN/ES.
 
-## Features
+### BepInEx plugin
+- Renames `general_christian` / `general_pagan` so the scenario UI shows **Cristiano / Pagano** instead of the cryptic vanilla "Restitucionista" / "Fiel del Roble".
+- Discovers every religion registered in `ReligionRepository` at runtime (vanilla + JSON content from any mod). The infrastructure for the upcoming multi-religion selector.
 
-### Buildings
-- Floor cross + wall crucifix
-- Wooden pew + padded pew
-- Grand altar (cathedral focal piece)
-- Confessional booth (required in churches and cathedrals)
-- Bell tower (anchors the Bell Tower room)
-- Three religious paintings (Christ, Virgin Mary, generic saint)
-- Three stained-glass windows (red, blue, gold)
+## Roadmap
 
-### Items
-- Bible (readable; trains Speechcraft)
-- Portable crucifix
-- Consecrated wine (reuses vanilla wine assets)
-
-### Rooms
-- **Church** (mid-tier worship room)
-- **Cathedral** (top-tier — replaces dormant vanilla `advanced_chapel_christian`)
-- **Bell tower** (room around the bell-tower structure)
-
-### Research
-- **Liturgy** — unlocks church, pews, paintings, confessional, items.
-- **Cathedral architecture** — unlocks cathedral, grand altar, stained glass, bell tower.
-
-### Localization
-- English, Spanish. See [`docs/translation-guide.md`](docs/translation-guide.md) to add a language.
-- Renames the vanilla "Restitutionist" to "Christianity" / "Cristianismo".
+| Version | Scope |
+|---|---|
+| **0.2** | Rename + discovery infrastructure (current). |
+| **0.3** | Extend renames to room types, tooltips, scenario detail strings. |
+| **0.4** | Replace the bipolar slider with a religion selector backed by `ReligionDiscovery`. |
+| **0.5** | Triggered events: Sunday mass, baptism, confession, hourly bell chime. |
+| **0.6** | Priest robe apparel + Speechcraft bonus. |
+| **1.0** | Custom meshes (Blender) and Workshop release. |
 
 ## Install
 
-```bash
-python tools/build_mod.py
-```
+The mod ships in two parts. Both are required.
 
-Then launch Going Medieval → menu → **Mods** → enable **Christianity Expanded**.
+1. **JSON content** -> drag `ModBuild/ReligionsExpanded/` into `Documents/Foxy Voxel/Going Medieval/Mods/`. Enable in the in-game **Mods** panel.
+2. **BepInEx plugin** -> install [BepInEx 5 (x64)](https://github.com/BepInEx/BepInEx/releases) into the Going Medieval install folder, run the game once so it generates `BepInEx/plugins/`, then drop `ReligionsExpanded.Plugin.dll` into `BepInEx/plugins/ReligionsExpanded/`.
 
-## Build
+`tools/build_mod.py` does both deploys for you on a dev machine.
+
+## Build from source
 
 Requirements:
 
-- Unity Editor **2022.3.46f1** with **Windows Build Support (IL2CPP)**.
-- Python **3.10+**.
+- Unity Editor **2022.3.46f1** with **Windows Build Support (IL2CPP)** (only needed once meshes are added).
+- .NET SDK 8 (for the BepInEx plugin).
+- Python **3.10+** (build script).
 - Going Medieval **0.23.3** installed.
 
 ```bash
-# Compile assets in Unity (only when meshes / textures change):
-#   1. Open this project in Unity Hub.
-#   2. Going Medieval menu -> AddressableBuilder -> Build.
-#
-# Merge JSONs and deploy:
+# JSON merge + deploy
 python tools/build_mod.py
+
+# C# plugin build + deploy
+dotnet build plugin/ReligionsExpanded.Plugin.csproj -c Release
 ```
 
-The script validates JSON, expands localization keys into the inline format Going Medieval expects, generates a CSV for the global I2 Localization table, merges modular files, and copies the result to `Documents/Foxy Voxel/Going Medieval/Mods/ChristianityExpanded/`.
+The plugin's `.csproj` deploys the DLL straight into `<game>/BepInEx/plugins/ReligionsExpanded/`. Override `GameDir` if your install lives somewhere else:
 
-## Repo layout
-
-See [`docs/architecture.md`](docs/architecture.md).
+```bash
+dotnet build plugin/ReligionsExpanded.Plugin.csproj -c Release -p:GameDir="D:\Games\Going Medieval"
+```
 
 ## Contributing
 

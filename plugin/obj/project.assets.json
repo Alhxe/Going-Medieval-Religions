@@ -13,9 +13,9 @@
   "project": {
     "version": "0.1.0",
     "restore": {
-      "projectUniqueName": "D:\\Codigos\\going_medieval\\Going Medieval Religions\\plugin\\ChristianityExpanded.Plugin.csproj",
-      "projectName": "ChristianityExpanded.Plugin",
-      "projectPath": "D:\\Codigos\\going_medieval\\Going Medieval Religions\\plugin\\ChristianityExpanded.Plugin.csproj",
+      "projectUniqueName": "D:\\Codigos\\going_medieval\\Going Medieval Religions\\plugin\\ReligionsExpanded.Plugin.csproj",
+      "projectName": "ReligionsExpanded.Plugin",
+      "projectPath": "D:\\Codigos\\going_medieval\\Going Medieval Religions\\plugin\\ReligionsExpanded.Plugin.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
       "outputPath": "D:\\Codigos\\going_medieval\\Going Medieval Religions\\plugin\\obj\\",
       "projectStyle": "PackageReference",

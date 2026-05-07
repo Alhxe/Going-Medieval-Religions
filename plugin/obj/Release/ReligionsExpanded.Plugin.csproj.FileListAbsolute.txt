@@ -1,0 +1,11 @@
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\bin\Release\ReligionsExpanded.Plugin.deps.json
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\bin\Release\ReligionsExpanded.Plugin.dll
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\bin\Release\ReligionsExpanded.Plugin.pdb
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.csproj.AssemblyReference.cache
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.AssemblyInfoInputs.cache
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.AssemblyInfo.cs
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.csproj.CoreCompileInputs.cache
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.sourcelink.json
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.dll
+D:\Codigos\going_medieval\Going Medieval Religions\plugin\obj\Release\ReligionsExpanded.Plugin.pdb

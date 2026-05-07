@@ -3,12 +3,20 @@ using I2.Loc;
 using NSMedieval.Controllers;
 using System.Collections.Generic;
 
-namespace Alhxe.ChristianityExpanded.Patches
+namespace Alhxe.ReligionsExpanded.Patches
 {
+    /// <summary>
+    /// Replaces specific I2 Localization values at lookup time. Going Medieval
+    /// ships its two religions under generic-sounding names ("Restitucionista"
+    /// / "Fiel del Roble") — we surface them as "Christian" / "Pagan" instead
+    /// so future religions added by Religions Expanded slot in alongside.
+    ///
+    /// We postfix every translation entry-point (I2 + the game's wrapper) so
+    /// it doesn't matter which one a given UI calls.
+    /// </summary>
     internal static class LocalizationRename
     {
-        // Real I2 keys discovered by reading ScenarioView source: `general_christian`,
-        // `general_pagan`, plus the room/research keys we added in JSON.
+        // term -> { language -> override }
         private static readonly Dictionary<string, Dictionary<string, string>> Overrides = new Dictionary<string, Dictionary<string, string>>
         {
             ["general_christian"] = new Dictionary<string, string> {
@@ -23,37 +31,24 @@ namespace Alhxe.ChristianityExpanded.Patches
                 ["English"] = "Christianity",
                 ["Spanish"] = "Cristianismo",
             },
+            ["religion_pagan_name"] = new Dictionary<string, string> {
+                ["English"] = "Paganism",
+                ["Spanish"] = "Paganismo",
+            },
             ["resource_name_restitutionist_relic"] = new Dictionary<string, string> {
                 ["English"] = "Holy Relic",
                 ["Spanish"] = "Reliquia sagrada",
             },
         };
 
-        private static readonly HashSet<string> _seen = new HashSet<string>();
-        private static int _logged;
-
         internal static string Translate(string term, string fallback)
         {
             if (string.IsNullOrEmpty(term)) return fallback;
+            if (!Overrides.TryGetValue(term, out var byLang)) return fallback;
 
-            if (fallback != null && _logged < 800 && _seen.Add(term))
-            {
-                _logged++;
-                Plugin.Log?.LogInfo($"[loc] {term} -> {fallback}");
-                try
-                {
-                    string path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "ce-loc-debug.txt");
-                    System.IO.File.AppendAllText(path, term + "\t" + fallback + "\n");
-                }
-                catch { }
-            }
-
-            if (Overrides.TryGetValue(term, out var byLang))
-            {
-                string lang = LocalizationManager.CurrentLanguage ?? "English";
-                if (byLang.TryGetValue(lang, out var t)) return t;
-                if (byLang.TryGetValue("English", out var en)) return en;
-            }
+            string lang = LocalizationManager.CurrentLanguage ?? "English";
+            if (byLang.TryGetValue(lang, out var t)) return t;
+            if (byLang.TryGetValue("English", out var en)) return en;
             return fallback;
         }
     }
@@ -65,7 +60,7 @@ namespace Alhxe.ChristianityExpanded.Patches
         private static void Postfix(string Term, ref string Translation, ref bool __result)
         {
             string newVal = LocalizationRename.Translate(Term, Translation);
-            if (newVal != Translation)
+            if (!ReferenceEquals(newVal, Translation))
             {
                 Translation = newVal;
                 __result = true;
@@ -86,23 +81,6 @@ namespace Alhxe.ChristianityExpanded.Patches
     [HarmonyPatch(typeof(LocalizationController), nameof(LocalizationController.GetText), new[] { typeof(string) })]
     internal static class Patch_LocalizationController_GetText
     {
-        // Sentinel: write file once. If file appears, patch runs.
-        private static int _hits;
-
-        [HarmonyPrefix]
-        private static void Prefix(string key)
-        {
-            if (System.Threading.Interlocked.Increment(ref _hits) <= 5)
-            {
-                try
-                {
-                    string p = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "ce-loc-debug.txt");
-                    System.IO.File.AppendAllText(p, $"[CTRL-Prefix #{_hits}] {key}\n");
-                }
-                catch { }
-            }
-        }
-
         [HarmonyPostfix]
         private static void Postfix(string key, ref string __result)
         {

@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ChristianityExpanded.Plugin")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ReligionsExpanded.Plugin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+7ecaf20239f9022750ee780c3cc5b79ccfe93636")]
-[assembly: System.Reflection.AssemblyProductAttribute("ChristianityExpanded.Plugin")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ChristianityExpanded.Plugin")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+76367a2008d9574263fd0f5f1389af18cd60d017")]
+[assembly: System.Reflection.AssemblyProductAttribute("ReligionsExpanded.Plugin")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ReligionsExpanded.Plugin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

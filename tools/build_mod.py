@@ -26,12 +26,10 @@ import tempfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-MOD_NAME = "ChristianityExpanded"
-LOCALE_MOD_NAME = "ChristianityExpanded-Lang"
+MOD_NAME = "ReligionsExpanded"
 MOD_SOURCE = REPO_ROOT / "ModBuild" / MOD_NAME
 DEPLOY_ROOT = Path(os.path.expanduser("~/Documents/Foxy Voxel/Going Medieval/Mods"))
 DEPLOY_DEST = DEPLOY_ROOT / MOD_NAME
-LOCALE_DEPLOY_DEST = DEPLOY_ROOT / LOCALE_MOD_NAME
 
 # Maps modular subfolder -> final repository filename the game loads.
 REPOSITORY_MAP = {
@@ -264,8 +262,8 @@ def main() -> int:
     shutil.rmtree(build_out)
 
     step("Done")
-    print("Mod deployed. Enable 'Christianity Expanded' in the Mods panel.")
-    print("Localization renames are handled by the BepInEx plugin (no separate locale mod needed).")
+    print("JSON content deployed. Enable 'Religions Expanded' in the Mods panel.")
+    print("The BepInEx plugin (build separately under plugin/) handles UI overrides and renames.")
     return 0
 
 

@@ -1,0 +1,11 @@
+{
+    "id": "alhxe.religions_expanded",
+    "name": "Religions Expanded",
+    "description": "Religion framework for Going Medieval. Adds new buildings, items, rooms, research and rituals to existing religions. Currently extends Christianity; future versions will add more religions and a multi-religion selector.",
+    "author": "alhxe",
+    "modVersion": "0.2.0",
+    "gameVersion": "0.23.3",
+    "tags": [
+        "General"
+    ]
+}

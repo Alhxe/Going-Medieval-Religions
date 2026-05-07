@@ -7,15 +7,15 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "ChristianityExpanded.Plugin/0.1.0": {
+      "ReligionsExpanded.Plugin/0.1.0": {
         "runtime": {
-          "ChristianityExpanded.Plugin.dll": {}
+          "ReligionsExpanded.Plugin.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "ChristianityExpanded.Plugin/0.1.0": {
+    "ReligionsExpanded.Plugin/0.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
