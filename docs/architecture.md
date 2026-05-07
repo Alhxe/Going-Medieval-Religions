@@ -58,7 +58,7 @@ The Unity `AddressableBuilder` window outputs compiled `.bundle` files to `Asset
 | `events/` | Game events / rituals. |
 | `stats/` | Custom stats (only if vanilla doesn't cover the need). |
 
-The build script (`tools/build-mod.ps1`) merges each folder into the single repository file the game expects (e.g. `buildings/*.json` → `BaseBuildingRepository.json`).
+The build script (`tools/build_mod.py`) merges each folder into the single repository file the game expects (e.g. `buildings/*.json` → `BaseBuildingRepository.json`).
 
 ## Localization strategy
 

@@ -1,0 +1,114 @@
+{
+    "_comment": "Christian crosses — floor (standing) and wall (crucifix). Skeletons modelled after vanilla `wood_standing_decoration_pagan` and `wall_decoration_christian`. Mesh / texture / icon assets get created via Unity AddressableBuilder; addressable IDs referenced below must match.",
+    "repository": [
+        {
+            "id": "cross_floor_christian",
+            "iconPath": "cross_floor_christian_icon",
+            "nameKey": "building_name_cross_floor_christian",
+            "infoKey": "building_info_cross_floor_christian",
+            "prefabID": "base_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 10,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": 0, "y": 1.0, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 2.0, "z": 0.4 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 1,
+            "buildingType": 32768,
+            "constructableBaseCategory": 4,
+            "placementType": 0,
+            "materials": {
+                "keys":   ["wood"],
+                "values": [12]
+            },
+            "returnOnDestroy":     { "keys": ["wood"], "values": [0.6] },
+            "returnOnDeconstruct": { "keys": ["wood"], "values": [0.3] },
+            "wealthPoints": 60,
+            "beautyInput": 50,
+            "flammability": 0.7,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 60,
+                    "attributes": { "max": [{ "baseValue": 60 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "cross_floor_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "cross_floor_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cross_wall_christian",
+            "iconPath": "cross_wall_christian_icon",
+            "nameKey": "building_name_cross_wall_christian",
+            "infoKey": "building_info_cross_wall_christian",
+            "prefabID": "base_wall_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 15,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": -0.4, "y": 1.7, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 1.5, "z": 0.6 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 1,
+            "buildingType": 32768,
+            "constructableBaseCategory": 7,
+            "placementType": 3,
+            "materials": {
+                "keys":   ["wood"],
+                "values": [8]
+            },
+            "returnOnDestroy":     { "keys": ["wood"], "values": [0.6] },
+            "returnOnDeconstruct": { "keys": ["wood"], "values": [0.3] },
+            "wealthPoints": 50,
+            "beautyInput": 40,
+            "flammability": 0.7,
+            "ignorePileRelocation": true,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 40,
+                    "attributes": { "max": [{ "baseValue": 40 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "cross_wall_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "cross_wall_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

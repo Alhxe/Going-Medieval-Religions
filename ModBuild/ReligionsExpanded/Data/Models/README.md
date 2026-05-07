@@ -1,6 +1,6 @@
 # Modular game definitions
 
-Each subfolder corresponds to a Going Medieval repository file. The build script (`tools/build-mod.ps1`) merges every `*.json` in a subfolder into the single repository file the game expects.
+Each subfolder corresponds to a Going Medieval repository file. The build script (`tools/build_mod.py`) merges every `*.json` in a subfolder into the single repository file the game expects.
 
 | Folder | Compiles to |
 |---|---|

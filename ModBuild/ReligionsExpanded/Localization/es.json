@@ -1,0 +1,22 @@
+{
+    "language": "Spanish",
+    "strings": {
+        "_comment": "Religions Expanded — cadenas en español.",
+
+        "religion_christian_name": "Cristianismo",
+        "religion_christian_description": "Sus fieles adoran a un solo Dios a través de Cristo. Construye capillas, catedrales y campanarios; nombra sacerdotes; celebra misa.",
+
+        "room_type_chapel_christian": "Capilla",
+        "room_info_chapel_christian": "Un pequeño lugar de culto cristiano. Requiere un altar y un atril de libro.",
+        "room_type_advanced_chapel_christian": "Catedral",
+        "room_info_advanced_chapel_christian": "Una gran casa de culto cristiana. Requiere tres altares grandes, seis decoraciones de pared, un estante de reliquias y un atril.",
+
+        "resource_name_restitutionist_relic": "Reliquia sagrada",
+        "resource_info_restitutionist_relic": "Una reliquia cristiana venerada. Inspira a los fieles.",
+
+        "building_name_cross_floor_christian": "Cruz de pie",
+        "building_info_cross_floor_christian": "Una cruz de madera clavada en el suelo. Marca tierra sagrada y mejora el ánimo de los fieles.",
+        "building_name_cross_wall_christian": "Crucifijo de pared",
+        "building_info_cross_wall_christian": "Un crucifijo colgado en la pared. Decoración espiritual para cualquier espacio cristiano."
+    }
+}

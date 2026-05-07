@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ModInfo for `Religions Expanded` mod.
 - Modular JSON folder layout under `ModBuild/ReligionsExpanded/Data/Models/`.
 - Localization scaffolding (English, Spanish).
-- Build script `tools/build-mod.ps1` for compiling and deploying the mod.
+- Build script `tools/build_mod.py` for compiling and deploying the mod.
 
 ### Notes
 - Targeting Going Medieval `0.23.3`.

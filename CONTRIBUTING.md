@@ -31,8 +31,8 @@ See [`docs/translation-guide.md`](docs/translation-guide.md).
 
 ## Build & test
 
-```powershell
-pwsh tools/build-mod.ps1
+```bash
+python tools/build_mod.py
 ```
 
 This validates JSON, merges modular files, and copies the result to `Documents/Foxy Voxel/Going Medieval/Mods/ReligionsExpanded/`. Then launch Going Medieval and enable the mod.

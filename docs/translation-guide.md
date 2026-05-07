@@ -26,14 +26,14 @@ Strings live in `Localization/<lang>.json`:
 }
 ```
 
-The build script (`tools/build-mod.ps1`) merges these into the inline `locKeys` format the game expects.
+The build script (`tools/build_mod.py`) merges these into the inline `locKeys` format the game expects.
 
 ## Adding a new language
 
 1. Copy `Localization/en.json` to `Localization/<your_lang>.json`.
 2. Set `"language"` to the value the game expects (`"English"`, `"Spanish"`, `"German"`, `"French"`, `"Portuguese (Brazil)"`, etc. — see `Going Medieval_Data/StreamingAssets/Language Enum.txt` in your install).
 3. Translate every value, leaving keys untouched.
-4. Run `tools/build-mod.ps1`.
+4. Run `tools/build_mod.py`.
 5. In-game, switch language; mod strings should follow.
 
 ## Glossary

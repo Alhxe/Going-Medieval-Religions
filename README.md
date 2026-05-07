@@ -31,19 +31,19 @@ The mod is built so adding more religions is mostly a matter of dropping new JSO
 Requirements:
 
 - Unity Editor **2022.3.46f1** with **Windows Build Support (IL2CPP)**.
-- PowerShell 7+.
+- Python **3.10+**.
 - Going Medieval **0.23.3** installed.
 
-```powershell
+```bash
 # Compile assets in Unity:
 #   1. Open this project in Unity Hub.
-#   2. Going Medieval menu → AddressableBuilder → Build.
+#   2. Going Medieval menu -> AddressableBuilder -> Build.
 #
 # Then merge JSONs and deploy:
-pwsh tools/build-mod.ps1
+python tools/build_mod.py
 ```
 
-The script validates JSON, merges modular files, and copies the result to `Documents/Foxy Voxel/Going Medieval/Mods/ReligionsExpanded/`.
+The script validates JSON, expands localization keys into the inline format Going Medieval expects, merges modular files, and copies the result to `Documents/Foxy Voxel/Going Medieval/Mods/ReligionsExpanded/`.
 
 ## Repo layout
 
