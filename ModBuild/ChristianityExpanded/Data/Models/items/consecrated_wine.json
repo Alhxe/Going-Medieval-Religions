@@ -1,0 +1,51 @@
+{
+    "_comment": "Consecrated wine — used during Mass. Variant of vanilla wine with religious tag. Reuses vanilla wine mesh / texture (no custom asset needed).",
+    "repository": [
+        {
+            "id": "consecrated_wine_christian",
+            "iconPath": "rough_wine",
+            "nameKey": "resource_name_consecrated_wine_christian",
+            "infoKey": "resource_info_consecrated_wine_christian",
+            "prefabPileID": "base_resource_pile",
+            "groupIdentifier": "religious_item",
+            "protoId": "consecrated_wine_christian",
+            "weight": 0.5,
+            "stackingLimit": 25,
+            "haulPriority": 0,
+            "hitpoints": 50,
+            "beautyInput": 0,
+            "flammability": 0.9,
+            "wealthPoints": 60,
+            "sortingGroup": "ReligiousItems",
+            "almanacTags": [
+                "almanac_group_name_Religious",
+                "resource_name_consecrated_wine_christian"
+            ],
+            "variationLists": [
+                {
+                    "name": "CountVariations",
+                    "variations": [
+                        {
+                            "name": "stackSize01",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh", "value": "rough_wine_pile" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "MaterialParameters",
+                    "variations": [
+                        {
+                            "name": "defaultMaterialParameters",
+                            "slots": [
+                                { "id": "1", "slot": "albedo",     "slotType": "Texture", "value": "rough_wine" },
+                                { "id": "2", "slot": "reflection", "slotType": "Texture", "value": "" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

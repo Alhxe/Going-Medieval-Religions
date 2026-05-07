@@ -1,0 +1,24 @@
+{
+    "_comment": "Cathedral architecture — top-tier Christian research. Unlocked by liturgy.",
+    "repository": [
+        {
+            "id": "cathedral_architecture",
+            "nameKey": "research_name_cathedral_architecture",
+            "iconActive":   "religious_structures_lvl1",
+            "iconUnlocked": "religious_structures_lvl1_unlocked",
+            "iconLocked":   "religious_structures_lvl1_locked",
+            "requiredResources": {
+                "keys":   ["basic_research_book", "normal_research_book", "advanced_research_book"],
+                "values": [25, 20, 15]
+            },
+            "unlocks": [
+                { "unlockId": "grand_altar_christian" },
+                { "unlockId": "stained_glass_red_christian" },
+                { "unlockId": "stained_glass_blue_christian" },
+                { "unlockId": "stained_glass_gold_christian" },
+                { "unlockId": "bell_tower_christian" },
+                { "unlockId": "cathedral_christian" }
+            ]
+        }
+    ]
+}

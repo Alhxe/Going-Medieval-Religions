@@ -1,0 +1,164 @@
+{
+    "_comment": "Christian stained-glass window (decorative wall). Three colour variants.",
+    "repository": [
+        {
+            "id": "stained_glass_red_christian",
+            "iconPath": "stained_glass_red_christian_icon",
+            "nameKey": "building_name_stained_glass_red_christian",
+            "infoKey": "building_info_stained_glass_christian",
+            "prefabID": "base_wall_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 50,
+            "minBuildSkillRequired": 18,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": -0.4, "y": 1.7, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 2.0, "z": 1.0 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 4,
+            "buildingType": 32768,
+            "constructableBaseCategory": 7,
+            "placementType": 3,
+            "materials":           { "keys": ["stone_block", "gold"], "values": [15, 2] },
+            "returnOnDestroy":     { "keys": ["stone_block", "gold"], "values": [0.4, 0.6] },
+            "returnOnDeconstruct": { "keys": ["stone_block", "gold"], "values": [0.3, 0.3] },
+            "wealthPoints": 350,
+            "beautyInput": 220,
+            "flammability": 0.0,
+            "ignorePileRelocation": true,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 80,
+                    "attributes": { "max": [{ "baseValue": 80 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "stained_glass_red_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "stained_glass_red_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "stained_glass_blue_christian",
+            "iconPath": "stained_glass_blue_christian_icon",
+            "nameKey": "building_name_stained_glass_blue_christian",
+            "infoKey": "building_info_stained_glass_christian",
+            "prefabID": "base_wall_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 50,
+            "minBuildSkillRequired": 18,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": -0.4, "y": 1.7, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 2.0, "z": 1.0 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 4,
+            "buildingType": 32768,
+            "constructableBaseCategory": 7,
+            "placementType": 3,
+            "materials":           { "keys": ["stone_block", "gold"], "values": [15, 2] },
+            "returnOnDestroy":     { "keys": ["stone_block", "gold"], "values": [0.4, 0.6] },
+            "returnOnDeconstruct": { "keys": ["stone_block", "gold"], "values": [0.3, 0.3] },
+            "wealthPoints": 350,
+            "beautyInput": 220,
+            "flammability": 0.0,
+            "ignorePileRelocation": true,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 80,
+                    "attributes": { "max": [{ "baseValue": 80 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "stained_glass_blue_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "stained_glass_blue_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "stained_glass_gold_christian",
+            "iconPath": "stained_glass_gold_christian_icon",
+            "nameKey": "building_name_stained_glass_gold_christian",
+            "infoKey": "building_info_stained_glass_christian",
+            "prefabID": "base_wall_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 60,
+            "minBuildSkillRequired": 20,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": -0.4, "y": 1.7, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 2.0, "z": 1.0 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 4,
+            "buildingType": 32768,
+            "constructableBaseCategory": 7,
+            "placementType": 3,
+            "materials":           { "keys": ["stone_block", "gold"], "values": [12, 5] },
+            "returnOnDestroy":     { "keys": ["stone_block", "gold"], "values": [0.4, 0.6] },
+            "returnOnDeconstruct": { "keys": ["stone_block", "gold"], "values": [0.3, 0.3] },
+            "wealthPoints": 500,
+            "beautyInput": 280,
+            "flammability": 0.0,
+            "ignorePileRelocation": true,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 80,
+                    "attributes": { "max": [{ "baseValue": 80 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "stained_glass_gold_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "stained_glass_gold_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

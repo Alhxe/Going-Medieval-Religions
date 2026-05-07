@@ -1,0 +1,9 @@
+{
+    "_comment": "Override vanilla religious_structures_lvl3. It's a leaf node (no nextNodesIDs in vanilla), so #APPEND fails. We set the field directly — JSON id-match override.",
+    "repository": [
+        {
+            "id": "religious_structures_lvl3",
+            "nextNodesIDs": ["liturgy"]
+        }
+    ]
+}

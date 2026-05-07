@@ -1,0 +1,20 @@
+{
+    "_comment": "Bell Tower room — built around the bell_tower_christian structure.",
+    "repository": [
+        {
+            "id": "bell_tower_room_christian",
+            "priority": 1,
+            "nameKey": "room_type_bell_tower_christian",
+            "color": "#cc8a3a",
+            "minimumArea": 12,
+            "mustHave": [
+                {
+                    "buildings": ["bell_tower_christian"],
+                    "minCount": 1
+                }
+            ],
+            "cantHaveOtherProductionBuildings": "true",
+            "isReligious": "true"
+        }
+    ]
+}

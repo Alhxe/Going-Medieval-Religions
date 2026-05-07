@@ -1,0 +1,51 @@
+{
+    "_comment": "Portable crucifix — small carry-able religious item. Same prefab pattern as relics/books.",
+    "repository": [
+        {
+            "id": "crucifix_christian",
+            "iconPath": "crucifix_christian_icon",
+            "nameKey": "resource_name_crucifix_christian",
+            "infoKey": "resource_info_crucifix_christian",
+            "prefabPileID": "base_resource_pile",
+            "groupIdentifier": "religious_item",
+            "protoId": "crucifix_christian",
+            "weight": 0.3,
+            "stackingLimit": 10,
+            "haulPriority": 0,
+            "hitpoints": 40,
+            "beautyInput": 8,
+            "flammability": 0.4,
+            "wealthPoints": 120,
+            "sortingGroup": "ReligiousItems",
+            "almanacTags": [
+                "almanac_group_name_Religious",
+                "resource_name_crucifix_christian"
+            ],
+            "variationLists": [
+                {
+                    "name": "CountVariations",
+                    "variations": [
+                        {
+                            "name": "stackSize01",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh", "value": "crucifix_christian_mesh" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "MaterialParameters",
+                    "variations": [
+                        {
+                            "name": "defaultMaterialParameters",
+                            "slots": [
+                                { "id": "1", "slot": "albedo",     "slotType": "Texture", "value": "crucifix_christian_albedo" },
+                                { "id": "2", "slot": "reflection", "slotType": "Texture", "value": "" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

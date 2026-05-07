@@ -1,0 +1,51 @@
+{
+    "_comment": "Bible — read for a small mood/Speechcraft buff. Modelled on `skill_book_intelectual_01`. Distinct from vanilla `restitutionist_relic` (which is a relic, not a readable book).",
+    "repository": [
+        {
+            "id": "bible_christian",
+            "iconPath": "bible_christian_icon",
+            "nameKey": "resource_name_bible_christian",
+            "infoKey": "resource_info_bible_christian",
+            "prefabPileID": "base_resource_pile",
+            "groupIdentifier": "religious_book",
+            "protoId": "bible_christian",
+            "weight": 0.6,
+            "stackingLimit": 5,
+            "haulPriority": 0,
+            "hitpoints": 60,
+            "beautyInput": 5,
+            "flammability": 0.9,
+            "wealthPoints": 200,
+            "sortingGroup": "Books",
+            "almanacTags": [
+                "almanac_group_name_Religious",
+                "resource_name_bible_christian"
+            ],
+            "variationLists": [
+                {
+                    "name": "CountVariations",
+                    "variations": [
+                        {
+                            "name": "stackSize01",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh", "value": "skill_book_pile" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "MaterialParameters",
+                    "variations": [
+                        {
+                            "name": "defaultMaterialParameters",
+                            "slots": [
+                                { "id": "1", "slot": "albedo",     "slotType": "Texture", "value": "bible_christian_albedo" },
+                                { "id": "2", "slot": "reflection", "slotType": "Texture", "value": "" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

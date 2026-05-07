@@ -1,0 +1,57 @@
+{
+    "_comment": "Christian bell tower — large structure that anchors a Bell Tower room and triggers the hourly bell chime event. Distinct from the vanilla `large_bell` (which is military). Multi-tile, requires high build skill.",
+    "repository": [
+        {
+            "id": "bell_tower_christian",
+            "iconPath": "bell_tower_christian_icon",
+            "nameKey": "building_name_bell_tower_christian",
+            "infoKey": "building_info_bell_tower_christian",
+            "prefabID": "large_bell",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 180,
+            "minBuildSkillRequired": 18,
+            "size": { "x": 3, "y": 1, "z": 3 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": 1.0, "y": 3.0, "z": 1.0 },
+                "sizeOffset":   { "x": 2.6, "y": 6.0, "z": 2.6 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 4,
+            "buildingType": 32768,
+            "constructableBaseCategory": 4,
+            "placementType": 0,
+            "materials":           { "keys": ["stone_block", "iron_ingot", "wood"], "values": [120, 30, 60] },
+            "returnOnDestroy":     { "keys": ["stone_block", "iron_ingot", "wood"], "values": [0.4, 0.6, 0.5] },
+            "returnOnDeconstruct": { "keys": ["stone_block", "iron_ingot", "wood"], "values": [0.3, 0.3, 0.3] },
+            "wealthPoints": 1200,
+            "beautyInput": 400,
+            "flammability": 0.1,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 600,
+                    "attributes": { "max": [{ "baseValue": 600 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "bell_tower_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "bell_tower_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

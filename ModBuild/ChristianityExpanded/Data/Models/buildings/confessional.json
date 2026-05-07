@@ -1,0 +1,61 @@
+{
+    "_comment": "Confessional booth. Required in any Christian chapel/cathedral. Two work positions: priest seat and confessor kneel. Triggers Confession game event.",
+    "repository": [
+        {
+            "id": "confessional_christian",
+            "iconPath": "confessional_christian_icon",
+            "nameKey": "building_name_confessional_christian",
+            "infoKey": "building_info_confessional_christian",
+            "prefabID": "chair",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 50,
+            "minBuildSkillRequired": 10,
+            "size": { "x": 2, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": 0.5, "y": 1.0, "z": 0 },
+                "sizeOffset":   { "x": 1.6, "y": 2.0, "z": 0.8 }
+            },
+            "workPositionsArray": [
+                { "id": "1", "positionOffset": { "x": 0, "y": 0, "z": -0.6 }, "rotationOffset": { "x": 0, "y": 0, "z": 0 } },
+                { "id": "2", "positionOffset": { "x": 1, "y": 0, "z": -0.6 }, "rotationOffset": { "x": 0, "y": 0, "z": 0 } }
+            ],
+            "buildingCategoryUI": "Furniture",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 1,
+            "buildingType": 4096,
+            "constructableBaseCategory": 3,
+            "placementType": 0,
+            "materials":           { "keys": ["wood"], "values": [40] },
+            "returnOnDestroy":     { "keys": ["wood"], "values": [0.6] },
+            "returnOnDeconstruct": { "keys": ["wood"], "values": [0.3] },
+            "wealthPoints": 150,
+            "beautyInput": 80,
+            "flammability": 0.7,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 100,
+                    "attributes": { "max": [{ "baseValue": 100 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "confessional_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "confessional_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

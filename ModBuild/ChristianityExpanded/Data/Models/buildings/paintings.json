@@ -1,0 +1,164 @@
+{
+    "_comment": "Christian wall paintings, three variants (Christ, Virgin Mary, generic Saint). All use the vanilla painting prefab; only mesh/texture differ.",
+    "repository": [
+        {
+            "id": "painting_christ_wall",
+            "iconPath": "painting_christ_wall_icon",
+            "nameKey": "building_name_painting_christ_wall",
+            "infoKey": "building_info_painting_christ_wall",
+            "prefabID": "base_wall_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 25,
+            "minBuildSkillRequired": 12,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": -0.4, "y": 1.7, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 1.5, "z": 0.9 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 1,
+            "buildingType": 32768,
+            "constructableBaseCategory": 7,
+            "placementType": 3,
+            "materials":           { "keys": ["wood", "linen"], "values": [10, 4] },
+            "returnOnDestroy":     { "keys": ["wood", "linen"], "values": [0.6, 0.6] },
+            "returnOnDeconstruct": { "keys": ["wood", "linen"], "values": [0.3, 0.3] },
+            "wealthPoints": 180,
+            "beautyInput": 110,
+            "flammability": 0.7,
+            "ignorePileRelocation": true,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 50,
+                    "attributes": { "max": [{ "baseValue": 50 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "painting_christ_wall_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "painting_christ_wall_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "painting_mary_wall",
+            "iconPath": "painting_mary_wall_icon",
+            "nameKey": "building_name_painting_mary_wall",
+            "infoKey": "building_info_painting_mary_wall",
+            "prefabID": "base_wall_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 25,
+            "minBuildSkillRequired": 12,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": -0.4, "y": 1.7, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 1.5, "z": 0.9 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 1,
+            "buildingType": 32768,
+            "constructableBaseCategory": 7,
+            "placementType": 3,
+            "materials":           { "keys": ["wood", "linen"], "values": [10, 4] },
+            "returnOnDestroy":     { "keys": ["wood", "linen"], "values": [0.6, 0.6] },
+            "returnOnDeconstruct": { "keys": ["wood", "linen"], "values": [0.3, 0.3] },
+            "wealthPoints": 180,
+            "beautyInput": 110,
+            "flammability": 0.7,
+            "ignorePileRelocation": true,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 50,
+                    "attributes": { "max": [{ "baseValue": 50 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "painting_mary_wall_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "painting_mary_wall_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "painting_saint_wall",
+            "iconPath": "painting_saint_wall_icon",
+            "nameKey": "building_name_painting_saint_wall",
+            "infoKey": "building_info_painting_saint_wall",
+            "prefabID": "base_wall_decoration",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 25,
+            "minBuildSkillRequired": 12,
+            "size": { "x": 1, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": -0.4, "y": 1.7, "z": 0 },
+                "sizeOffset":   { "x": 0.4, "y": 1.5, "z": 0.9 }
+            },
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 1,
+            "buildingType": 32768,
+            "constructableBaseCategory": 7,
+            "placementType": 3,
+            "materials":           { "keys": ["wood", "linen"], "values": [10, 4] },
+            "returnOnDestroy":     { "keys": ["wood", "linen"], "values": [0.6, 0.6] },
+            "returnOnDeconstruct": { "keys": ["wood", "linen"], "values": [0.3, 0.3] },
+            "wealthPoints": 160,
+            "beautyInput": 95,
+            "flammability": 0.7,
+            "ignorePileRelocation": true,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 50,
+                    "attributes": { "max": [{ "baseValue": 50 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "painting_saint_wall_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "painting_saint_wall_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

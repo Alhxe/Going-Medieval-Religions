@@ -1,0 +1,10 @@
+{
+    "_comment": "Christianity religion override. Uses #APPEND so we add to the existing shrines/roomTypes lists without replacing what vanilla provides.",
+    "repository": [
+        {
+            "id": "christian",
+            "shrines#APPEND":   ["grand_altar_christian"],
+            "roomTypes#APPEND": ["church_christian", "cathedral_christian"]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "_comment": "Cathedral — top-tier Christian worship room. Pure mod content; no vanilla shrines or book stand required so it feels Christian instead of Restitutionist.",
+    "repository": [
+        {
+            "id": "cathedral_christian",
+            "priority": 2,
+            "nameKey": "room_type_cathedral_christian",
+            "color": "#ff0078",
+            "minimumArea": 80,
+            "mustHave": [
+                {
+                    "buildings": ["grand_altar_christian"],
+                    "minCount": 1
+                },
+                {
+                    "buildings": ["pew_wood_christian", "pew_padded_christian"],
+                    "minCount": 8
+                },
+                {
+                    "buildings": ["confessional_christian"],
+                    "minCount": 1
+                },
+                {
+                    "buildings": [
+                        "stained_glass_red_christian",
+                        "stained_glass_blue_christian",
+                        "stained_glass_gold_christian"
+                    ],
+                    "minCount": 3
+                },
+                {
+                    "buildings": [
+                        "painting_christ_wall",
+                        "painting_mary_wall",
+                        "painting_saint_wall"
+                    ],
+                    "minCount": 4
+                },
+                {
+                    "buildings": [
+                        "cross_floor_christian",
+                        "cross_wall_christian"
+                    ],
+                    "minCount": 2
+                }
+            ],
+            "cantHaveOtherProductionBuildings": "true",
+            "cantHave": [
+                "shrine_pagan_wood",
+                "shrine_pagan_stone",
+                "large_shrine_pagan_wood",
+                "large_shrine_pagan_stone",
+                "pagan_ritual_circle",
+                "prison_marker"
+            ],
+            "isReligious": "true"
+        }
+    ]
+}

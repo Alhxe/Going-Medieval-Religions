@@ -1,0 +1,62 @@
+{
+    "_comment": "Grand altar — top-tier Christian focal piece. Larger and more impressive than vanilla shrines. Uses vanilla `shrine` prefab so priests can perform liturgical work at it.",
+    "repository": [
+        {
+            "id": "grand_altar_christian",
+            "iconPath": "grand_altar_christian_icon",
+            "nameKey": "building_name_grand_altar_christian",
+            "infoKey": "building_info_grand_altar_christian",
+            "prefabID": "shrine",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildItem": "hammer_item",
+            "buildTime": 90,
+            "minBuildSkillRequired": 18,
+            "size": { "x": 4, "y": 1, "z": 2 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": 1.5, "y": 1.5, "z": 0.5 },
+                "sizeOffset":   { "x": 3.5, "y": 3.0, "z": 1.6 }
+            },
+            "workPositionsArray": [
+                { "id": "1", "positionOffset": { "x": 0, "y": 0, "z": -1.2 }, "rotationOffset": { "x": 0, "y": 0, "z": 0 } },
+                { "id": "2", "positionOffset": { "x": 1.5, "y": 0, "z": -1.35 }, "rotationOffset": { "x": 0, "y": 0, "z": 0 } },
+                { "id": "3", "positionOffset": { "x": 3, "y": 0, "z": -1.2 }, "rotationOffset": { "x": 0, "y": 0, "z": 0 } }
+            ],
+            "buildingCategoryUI": "Leisure",
+            "buildingSubCategoryUI": "SubCtgRelDecoChristian",
+            "soundMaterialCategory": 4,
+            "buildingType": 32768,
+            "constructableBaseCategory": 4,
+            "placementType": 0,
+            "materials":           { "keys": ["stone_block", "gold"], "values": [80, 5] },
+            "returnOnDestroy":     { "keys": ["stone_block", "gold"], "values": [0.5, 0.6] },
+            "returnOnDeconstruct": { "keys": ["stone_block", "gold"], "values": [0.3, 0.3] },
+            "wealthPoints": 600,
+            "beautyInput": 250,
+            "flammability": 0.2,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 250,
+                    "attributes": { "max": [{ "baseValue": 250 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "grand_altar_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "grand_altar_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

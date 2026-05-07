@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: FVMod
+  m_Name: ReligionsExpanded
   m_EditorClassIdentifier: 
-  m_GroupName: FVMod
+  m_GroupName: ReligionsExpanded
   m_Data:
     m_SerializedData: []
-  m_GUID: f6c4db77d0d95334c896875833e3329e
+  m_GUID: b2be330b1545ff44499f7966c3bc95ce
   m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6ba0bb8a79487d04cb6c86c8de43823b, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 4aab2251af5023f48ae5c2a20b79d28c, type: 2}
-    - {fileID: 11400000, guid: 1867958e3806e1d45bd763650f0f2db1, type: 2}
+    - {fileID: 11400000, guid: 61d357eee8b899e49aefacdabb486309, type: 2}
+    - {fileID: 11400000, guid: ba810b315527cf2448d2cb0cc184a312, type: 2}

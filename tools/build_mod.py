@@ -26,10 +26,12 @@ import tempfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-MOD_NAME = "ReligionsExpanded"
+MOD_NAME = "ChristianityExpanded"
+LOCALE_MOD_NAME = "ChristianityExpanded-Lang"
 MOD_SOURCE = REPO_ROOT / "ModBuild" / MOD_NAME
 DEPLOY_ROOT = Path(os.path.expanduser("~/Documents/Foxy Voxel/Going Medieval/Mods"))
 DEPLOY_DEST = DEPLOY_ROOT / MOD_NAME
+LOCALE_DEPLOY_DEST = DEPLOY_ROOT / LOCALE_MOD_NAME
 
 # Maps modular subfolder -> final repository filename the game loads.
 REPOSITORY_MAP = {
@@ -134,6 +136,36 @@ def expand_loc_keys(node, locales: dict[str, dict[str, str]], missing: set[str])
 
 
 # ---------------------------------------------------------------------------
+# I2 Localization CSV
+# ---------------------------------------------------------------------------
+
+import csv
+
+# Going Medieval localization mods place per-language CSVs at
+# `<mod>/Data/Localization/<Language>.csv`. The official guide says: rename the
+# CSV to your target language and replace it. The vanilla game ships
+# `Data/Localization/English.csv` and friends.
+#
+# Format mirrors the I2 Localization convention: Key, Type, Desc, <Language>.
+def write_localization_csvs(out_dir: Path, locales: dict[str, dict[str, str]]) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    all_keys: set[str] = set()
+    for strings in locales.values():
+        all_keys.update(strings.keys())
+    sorted_keys = sorted(all_keys)
+
+    for language, strings in locales.items():
+        out_path = out_dir / f"{language}.csv"
+        with out_path.open("w", encoding="utf-8", newline="") as fh:
+            writer = csv.writer(fh, delimiter=",", quoting=csv.QUOTE_ALL)
+            writer.writerow(["Key", "Type", "Desc", language])
+            for key in sorted_keys:
+                writer.writerow([key, "Text", "", strings.get(key, "")])
+        print(f"  Wrote {out_path.name} ({len(sorted_keys)} keys)")
+
+
+# ---------------------------------------------------------------------------
 # Merge modular files
 # ---------------------------------------------------------------------------
 
@@ -205,6 +237,11 @@ def main() -> int:
             warn(f"  - {k}")
         print()
 
+    # Localization is shipped as a SEPARATE mod (Localization tag) so the
+    # game's I2 system picks up the CSVs. Content + Localization in the same
+    # mod folder doesn't work — Going Medieval reads CSVs only from mods
+    # tagged Localization, which appear in the Languages panel.
+
     # Copy ModInfo, Preview, AddressableAssets verbatim
     shutil.copy2(MOD_SOURCE / "ModInfo.json", build_out / "ModInfo.json")
     preview = MOD_SOURCE / "Preview.png"
@@ -217,17 +254,18 @@ def main() -> int:
 
     if args.skip_deploy:
         step("Skipping deploy")
-        print(f"Build artefacts at: {build_out}")
+        print(f"Content build: {build_out}")
         return 0
 
-    step(f"Deploying to {DEPLOY_DEST}")
+    step(f"Deploying content to {DEPLOY_DEST}")
     if DEPLOY_DEST.exists():
         shutil.rmtree(DEPLOY_DEST)
     shutil.copytree(build_out, DEPLOY_DEST)
     shutil.rmtree(build_out)
 
     step("Done")
-    print("Mod deployed. Launch Going Medieval and enable 'Religions Expanded'.")
+    print("Mod deployed. Enable 'Christianity Expanded' in the Mods panel.")
+    print("Localization renames are handled by the BepInEx plugin (no separate locale mod needed).")
     return 0
 
 

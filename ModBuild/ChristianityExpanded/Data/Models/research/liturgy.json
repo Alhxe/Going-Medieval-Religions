@@ -1,0 +1,31 @@
+{
+    "_comment": "Liturgy — mid-tier Christian research. Reachable from religious_structures_lvl3 via the override file. Unlocks all our basic Christian buildings and items.",
+    "repository": [
+        {
+            "id": "liturgy",
+            "nameKey": "research_name_liturgy",
+            "nextNodesIDs": ["cathedral_architecture"],
+            "iconActive":   "religious_structures_lvl1",
+            "iconUnlocked": "religious_structures_lvl1_unlocked",
+            "iconLocked":   "religious_structures_lvl1_locked",
+            "requiredResources": {
+                "keys":   ["basic_research_book", "normal_research_book"],
+                "values": [25, 10]
+            },
+            "unlocks": [
+                { "unlockId": "pew_wood_christian" },
+                { "unlockId": "pew_padded_christian" },
+                { "unlockId": "confessional_christian" },
+                { "unlockId": "painting_christ_wall" },
+                { "unlockId": "painting_mary_wall" },
+                { "unlockId": "painting_saint_wall" },
+                { "unlockId": "church_christian" },
+                { "unlockId": "bible_christian" },
+                { "unlockId": "crucifix_christian" },
+                { "unlockId": "consecrated_wine_christian" },
+                { "unlockId": "cross_floor_christian" },
+                { "unlockId": "cross_wall_christian" }
+            ]
+        }
+    ]
+}

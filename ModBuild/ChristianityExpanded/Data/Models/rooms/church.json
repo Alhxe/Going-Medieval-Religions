@@ -1,0 +1,43 @@
+{
+    "_comment": "Mid-tier Christian worship room. Pure mod content; uses our buildings instead of vanilla shrines/book stand.",
+    "repository": [
+        {
+            "id": "church_christian",
+            "priority": 1,
+            "nameKey": "room_type_church_christian",
+            "color": "#a05cff",
+            "minimumArea": 30,
+            "mustHave": [
+                {
+                    "buildings": ["grand_altar_christian"],
+                    "minCount": 1
+                },
+                {
+                    "buildings": ["pew_wood_christian", "pew_padded_christian"],
+                    "minCount": 4
+                },
+                {
+                    "buildings": ["confessional_christian"],
+                    "minCount": 1
+                },
+                {
+                    "buildings": [
+                        "cross_floor_christian",
+                        "cross_wall_christian"
+                    ],
+                    "minCount": 1
+                }
+            ],
+            "cantHaveOtherProductionBuildings": "true",
+            "cantHave": [
+                "shrine_pagan_wood",
+                "shrine_pagan_stone",
+                "large_shrine_pagan_wood",
+                "large_shrine_pagan_stone",
+                "pagan_ritual_circle",
+                "prison_marker"
+            ],
+            "isReligious": "true"
+        }
+    ]
+}

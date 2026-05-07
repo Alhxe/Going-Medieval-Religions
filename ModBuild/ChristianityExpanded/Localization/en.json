@@ -1,0 +1,64 @@
+{
+    "language": "English",
+    "strings": {
+        "_comment": "Religions Expanded — English strings.",
+
+        "religion_christian_name": "Christianity",
+        "religion_christian_description": "Followers worship one God through Christ. Build chapels, cathedrals and bell towers; appoint priests; hold mass.",
+
+        "room_type_chapel_christian": "Chapel",
+        "room_info_chapel_christian": "A small place of Christian worship. Requires a shrine and a book stand.",
+        "room_type_advanced_chapel_christian": "Cathedral (vanilla)",
+        "room_info_advanced_chapel_christian": "Vanilla advanced chapel. Use Cathedral instead.",
+        "room_type_church_christian": "Church",
+        "room_info_church_christian": "A mid-sized Christian house of worship. Requires a grand altar, four pews and a confessional.",
+        "room_type_cathedral_christian": "Cathedral",
+        "room_info_cathedral_christian": "A grand Christian cathedral. Requires a grand altar, two large shrines, eight pews, a confessional, three stained-glass windows, four wall paintings, a relic shelf and a book stand.",
+        "room_type_bell_tower_christian": "Bell tower",
+        "room_info_bell_tower_christian": "A bell tower room. Houses a Christian bell that tolls on the hour.",
+
+        "resource_name_restitutionist_relic": "Holy Relic",
+        "resource_info_restitutionist_relic": "A revered Christian relic. Inspires the faithful.",
+
+        "resource_name_bible_christian": "Bible",
+        "resource_info_bible_christian": "Holy scripture. Reading it raises mood and trains Speechcraft.",
+        "resource_name_crucifix_christian": "Crucifix",
+        "resource_info_crucifix_christian": "A small portable crucifix. Carrying it gives a slight comfort to the faithful.",
+        "resource_name_consecrated_wine_christian": "Consecrated wine",
+        "resource_info_consecrated_wine_christian": "Wine blessed for use in Mass.",
+
+        "building_name_cross_floor_christian": "Floor cross",
+        "building_info_cross_floor_christian": "A wooden cross planted on the ground. Marks holy ground and lifts the mood of the faithful.",
+        "building_name_cross_wall_christian":  "Wall crucifix",
+        "building_info_cross_wall_christian":  "A crucifix hung on the wall. Spiritual decoration for any Christian space.",
+
+        "building_name_pew_wood_christian":   "Wooden pew",
+        "building_info_pew_wood_christian":   "A simple wooden bench for the faithful to sit through mass.",
+        "building_name_pew_padded_christian": "Padded pew",
+        "building_info_pew_padded_christian": "A wooden pew softened with linen. More comfortable; makes long sermons bearable.",
+
+        "building_name_grand_altar_christian": "Grand altar",
+        "building_info_grand_altar_christian": "An imposing stone altar trimmed with gold. The focal point of any cathedral.",
+
+        "building_name_confessional_christian": "Confessional",
+        "building_info_confessional_christian": "A wooden booth where colonists confess to the priest. Required in churches and cathedrals.",
+
+        "building_name_bell_tower_christian": "Bell tower",
+        "building_info_bell_tower_christian": "A tall stone tower housing a great bell. Tolls on the hour, lifting the mood of every believer nearby.",
+
+        "building_name_painting_christ_wall": "Painting of Christ",
+        "building_info_painting_christ_wall": "A devotional painting of Christ. Powerful spiritual decoration.",
+        "building_name_painting_mary_wall":   "Painting of the Virgin Mary",
+        "building_info_painting_mary_wall":   "A devotional painting of the Virgin Mary. Comforting and beautiful.",
+        "building_name_painting_saint_wall":  "Painting of a saint",
+        "building_info_painting_saint_wall":  "A painting depicting a Christian saint.",
+
+        "building_name_stained_glass_red_christian":  "Red stained-glass window",
+        "building_name_stained_glass_blue_christian": "Blue stained-glass window",
+        "building_name_stained_glass_gold_christian": "Gold stained-glass window",
+        "building_info_stained_glass_christian":      "A coloured-glass window. Casts holy light on whoever passes.",
+
+        "research_name_liturgy": "Liturgy",
+        "research_name_cathedral_architecture": "Cathedral architecture"
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "language": "Spanish",
+    "strings": {
+        "_comment": "Religions Expanded — cadenas en español.",
+
+        "religion_christian_name": "Cristianismo",
+        "religion_christian_description": "Sus fieles adoran a un solo Dios a través de Cristo. Construye capillas, catedrales y campanarios; nombra sacerdotes; celebra misa.",
+
+        "room_type_chapel_christian": "Capilla",
+        "room_info_chapel_christian": "Un pequeño lugar de culto cristiano. Requiere un altar y un atril de libro.",
+        "room_type_advanced_chapel_christian": "Catedral (vanilla)",
+        "room_info_advanced_chapel_christian": "Catedral vanilla. Usa Catedral en su lugar.",
+        "room_type_church_christian": "Iglesia",
+        "room_info_church_christian": "Una casa de culto cristiano de tamaño medio. Requiere altar mayor, cuatro bancos y un confesionario.",
+        "room_type_cathedral_christian": "Catedral",
+        "room_info_cathedral_christian": "Una gran catedral cristiana. Requiere altar mayor, dos altares grandes, ocho bancos, un confesionario, tres vidrieras, cuatro cuadros de pared, un estante de reliquias y un atril.",
+        "room_type_bell_tower_christian": "Campanario",
+        "room_info_bell_tower_christian": "Una sala de campanario. Alberga una campana cristiana que repica cada hora.",
+
+        "resource_name_restitutionist_relic": "Reliquia sagrada",
+        "resource_info_restitutionist_relic": "Una reliquia cristiana venerada. Inspira a los fieles.",
+
+        "resource_name_bible_christian": "Biblia",
+        "resource_info_bible_christian": "Sagrada escritura. Leerla mejora el ánimo y entrena Don de gentes.",
+        "resource_name_crucifix_christian": "Crucifijo",
+        "resource_info_crucifix_christian": "Un pequeño crucifijo portátil. Llevarlo da un leve consuelo a los fieles.",
+        "resource_name_consecrated_wine_christian": "Vino consagrado",
+        "resource_info_consecrated_wine_christian": "Vino bendecido para su uso en la misa.",
+
+        "building_name_cross_floor_christian": "Cruz de pie",
+        "building_info_cross_floor_christian": "Una cruz de madera clavada en el suelo. Marca tierra sagrada y mejora el ánimo de los fieles.",
+        "building_name_cross_wall_christian":  "Crucifijo de pared",
+        "building_info_cross_wall_christian":  "Un crucifijo colgado en la pared. Decoración espiritual para cualquier espacio cristiano.",
+
+        "building_name_pew_wood_christian":   "Banco de madera",
+        "building_info_pew_wood_christian":   "Un banco de madera sencillo para que los fieles se sienten durante la misa.",
+        "building_name_pew_padded_christian": "Banco acolchado",
+        "building_info_pew_padded_christian": "Un banco de iglesia con cojín de lino. Más cómodo; hace soportables los sermones largos.",
+
+        "building_name_grand_altar_christian": "Altar mayor",
+        "building_info_grand_altar_christian": "Un imponente altar de piedra ribeteado en oro. El centro de cualquier catedral.",
+
+        "building_name_confessional_christian": "Confesionario",
+        "building_info_confessional_christian": "Una caseta de madera donde los colonos confiesan ante el sacerdote. Obligatorio en iglesias y catedrales.",
+
+        "building_name_bell_tower_christian": "Campanario",
+        "building_info_bell_tower_christian": "Una alta torre de piedra con una gran campana. Repica cada hora y eleva el ánimo de los fieles cercanos.",
+
+        "building_name_painting_christ_wall": "Cuadro de Cristo",
+        "building_info_painting_christ_wall": "Un cuadro devocional de Cristo. Decoración espiritual poderosa.",
+        "building_name_painting_mary_wall":   "Cuadro de la Virgen María",
+        "building_info_painting_mary_wall":   "Un cuadro devocional de la Virgen María. Reconfortante y hermoso.",
+        "building_name_painting_saint_wall":  "Cuadro de un santo",
+        "building_info_painting_saint_wall":  "Un cuadro que representa a un santo cristiano.",
+
+        "building_name_stained_glass_red_christian":  "Vidriera roja",
+        "building_name_stained_glass_blue_christian": "Vidriera azul",
+        "building_name_stained_glass_gold_christian": "Vidriera dorada",
+        "building_info_stained_glass_christian":      "Una ventana de vidrio coloreado. Proyecta luz sagrada sobre quien la cruza.",
+
+        "research_name_liturgy": "Liturgia",
+        "research_name_cathedral_architecture": "Arquitectura catedralicia"
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "_comment": "Christian pew (church bench). Two tiers: simple wood, padded. Uses vanilla `chair` prefab so colonists actually sit.",
+    "repository": [
+        {
+            "id": "pew_wood_christian",
+            "iconPath": "pew_wood_christian_icon",
+            "nameKey": "building_name_pew_wood_christian",
+            "infoKey": "building_info_pew_wood_christian",
+            "prefabID": "chair",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildAnimationTrigger": "BuildDown",
+            "buildItem": "hammer_item",
+            "buildTime": 25,
+            "minBuildSkillRequired": 5,
+            "size": { "x": 2, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": 0.5, "y": 0.5, "z": 0 },
+                "sizeOffset":   { "x": 1.6, "y": 1.1, "z": 0.5 }
+            },
+            "buildingCategoryUI": "Furniture",
+            "buildingSubCategoryUI": "SubCtgChair",
+            "soundMaterialCategory": 1,
+            "buildingType": 4096,
+            "constructableBaseCategory": 3,
+            "placementType": 0,
+            "materials":           { "keys": ["wood"], "values": [30] },
+            "returnOnDestroy":     { "keys": ["wood"], "values": [0.6] },
+            "returnOnDeconstruct": { "keys": ["wood"], "values": [0.3] },
+            "wealthPoints": 70,
+            "beautyInput": 30,
+            "flammability": 0.7,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 70,
+                    "attributes": { "max": [{ "baseValue": 70 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "pew_wood_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "pew_wood_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pew_padded_christian",
+            "iconPath": "pew_padded_christian_icon",
+            "nameKey": "building_name_pew_padded_christian",
+            "infoKey": "building_info_pew_padded_christian",
+            "prefabID": "chair",
+            "previewPrefabID": "base_constructable_preview",
+            "occlusionCullingMode": "CanBeOccludedOnly",
+            "buildAnimationTrigger": "BuildDown",
+            "buildItem": "hammer_item",
+            "buildTime": 35,
+            "minBuildSkillRequired": 10,
+            "size": { "x": 2, "y": 1, "z": 1 },
+            "boxColliderSettings": {
+                "centerOffset": { "x": 0.5, "y": 0.5, "z": 0 },
+                "sizeOffset":   { "x": 1.6, "y": 1.1, "z": 0.5 }
+            },
+            "buildingCategoryUI": "Furniture",
+            "buildingSubCategoryUI": "SubCtgChair",
+            "soundMaterialCategory": 1,
+            "buildingType": 4096,
+            "constructableBaseCategory": 3,
+            "placementType": 0,
+            "materials":           { "keys": ["wood", "linen"], "values": [25, 8] },
+            "returnOnDestroy":     { "keys": ["wood", "linen"], "values": [0.6, 0.6] },
+            "returnOnDeconstruct": { "keys": ["wood", "linen"], "values": [0.3, 0.3] },
+            "wealthPoints": 110,
+            "beautyInput": 60,
+            "flammability": 0.7,
+            "stats": [
+                {
+                    "debugName": "Hitpoints",
+                    "type": 1,
+                    "initialValue": 80,
+                    "attributes": { "max": [{ "baseValue": 80 }] }
+                }
+            ],
+            "variationLists": [
+                {
+                    "name": "List01",
+                    "hideInUI": true,
+                    "variations": [
+                        {
+                            "name": "default",
+                            "slots": [
+                                { "id": "1", "slot": "baseMesh", "slotType": "Mesh",    "value": "pew_padded_christian_mesh" },
+                                { "id": "2", "slot": "albedo",   "slotType": "Texture", "value": "pew_padded_christian_albedo" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
