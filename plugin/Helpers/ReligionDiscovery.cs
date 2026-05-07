@@ -29,6 +29,10 @@ namespace Alhxe.ReligionsExpanded.Helpers
             var repo = Repository<ReligionRepository, ReligionConfig>.Instance;
             if (repo == null) return result;
 
+            // Lazy auto-redistribute ranges so a 3rd, 4th, ... religion fits
+            // without anyone editing JSON ranges by hand.
+            ReligionRangeNormalizer.EnsureApplied();
+
             foreach (var cfg in repo.GetAllItems())
             {
                 if (cfg == null) continue;

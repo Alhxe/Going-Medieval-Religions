@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReligionsExpanded.Plugin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+76367a2008d9574263fd0f5f1389af18cd60d017")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+25a4285b4db9b1b785fce253b23607f1c8f31bd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReligionsExpanded.Plugin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReligionsExpanded.Plugin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]

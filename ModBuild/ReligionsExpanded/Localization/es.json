@@ -1,7 +1,16 @@
 {
     "language": "Spanish",
     "strings": {
-        "_comment": "Religions Expanded — cadenas en español.",
+        "_comment": "Religions Expanded — cadenas en español. Las leen tanto el build de JSON como el plugin BepInEx.",
+
+        "general_christian":   "Cristiano",
+        "general_pagan":       "Pagano",
+        "general_islamic":     "Musulmán",
+        "religion_pagan_name": "Paganismo",
+        "religion_islamic_name": "Islam",
+        "religion_unaligned_name": "Sin religión",
+        "scenario_edit_religion_title": "Religiones",
+        "scenario_edit_religion_key":   "Elige qué religiones existen en este escenario. Cada colono inicial recibe al azar una de las religiones marcadas; algunos pueden quedar sin religión. Si no marcas ninguna, todos los colonos empiezan sin religión.",
 
         "religion_christian_name": "Cristianismo",
         "religion_christian_description": "Sus fieles adoran a un solo Dios a través de Cristo. Construye capillas, catedrales y campanarios; nombra sacerdotes; celebra misa.",

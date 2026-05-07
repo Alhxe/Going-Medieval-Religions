@@ -1,7 +1,16 @@
 {
     "language": "English",
     "strings": {
-        "_comment": "Religions Expanded — English strings.",
+        "_comment": "Religions Expanded — English strings. Read by both the JSON build script and the BepInEx plugin.",
+
+        "general_christian":   "Christian",
+        "general_pagan":       "Pagan",
+        "general_islamic":     "Muslim",
+        "religion_pagan_name": "Paganism",
+        "religion_islamic_name": "Islam",
+        "religion_unaligned_name": "Unaligned",
+        "scenario_edit_religion_title": "Religions",
+        "scenario_edit_religion_key":   "Pick which religions exist in this scenario. Each starting colonist is randomly given one of the selected religions; some colonists may end up unaligned. If you select none, all colonists start unaligned.",
 
         "religion_christian_name": "Christianity",
         "religion_christian_description": "Followers worship one God through Christ. Build chapels, cathedrals and bell towers; appoint priests; hold mass.",

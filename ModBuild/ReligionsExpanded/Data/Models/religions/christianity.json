@@ -1,10 +1,40 @@
 {
-    "_comment": "Christianity religion override. Uses #APPEND so we add to the existing shrines/roomTypes lists without replacing what vanilla provides.",
+    "_comment": "Religion content overrides + new religion definitions. The plugin's ReligionRangeNormalizer auto-redistributes from/to ranges across however many religions are registered, so mod authors don't have to set ranges by hand.",
     "repository": [
         {
             "id": "christian",
             "shrines#APPEND":   ["grand_altar_christian"],
             "roomTypes#APPEND": ["church_christian", "cathedral_christian"]
+        },
+        {
+            "id": "islamic",
+            "shrines": [
+                "large_shrine_christian_wood",
+                "large_shrine_christian_stone",
+                "shrine_christian_wood",
+                "shrine_christian_stone"
+            ],
+            "roomTypes": ["chapel_christian"],
+            "believerEffectors": [
+                { "impressiveness": "awful",                  "effectors": ["InChapelMoodPlusAwful"] },
+                { "impressiveness": "dull",                   "effectors": ["InChapelMoodPlusDull"] },
+                { "impressiveness": "mediocre",               "effectors": ["InChapelMoodPlusMediocre"] },
+                { "impressiveness": "good",                   "effectors": ["InChapelMoodPlusGood"] },
+                { "impressiveness": "slightly_impressive",    "effectors": ["InChapelMoodPlusSlightlyImpressive"] },
+                { "impressiveness": "somewhat_impressive",    "effectors": ["InChapelMoodPlusSomewhatImpressive"] },
+                { "impressiveness": "very_impressive",        "effectors": ["InChapelMoodPlusVeryImpressive"] },
+                { "impressiveness": "extremely_impressive",   "effectors": ["InChapelMoodPlusExtremelyImpressive"] }
+            ],
+            "nonBelieverEffectors": [
+                { "impressiveness": "awful",                  "effectors": ["InChapelMoodMinus"] },
+                { "impressiveness": "dull",                   "effectors": ["InChapelMoodMinus"] },
+                { "impressiveness": "mediocre",               "effectors": ["InChapelMoodMinus"] },
+                { "impressiveness": "good",                   "effectors": ["InChapelMoodMinus"] },
+                { "impressiveness": "slightly_impressive",    "effectors": ["InChapelMoodMinus"] },
+                { "impressiveness": "somewhat_impressive",    "effectors": ["InChapelMoodMinus"] },
+                { "impressiveness": "very_impressive",        "effectors": ["InChapelMoodMinus"] },
+                { "impressiveness": "extremely_impressive",   "effectors": ["InChapelMoodMinus"] }
+            ]
         }
     ]
 }

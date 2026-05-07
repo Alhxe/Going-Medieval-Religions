@@ -250,6 +250,13 @@ def main() -> int:
         shutil.copytree(addressable_src, build_out / "Data" / "AddressableAssets")
         print("  Copied AddressableAssets/")
 
+    # Ship the source Localization JSONs alongside the mod so the BepInEx
+    # plugin can read them at runtime (single source of truth for translators).
+    locale_src = MOD_SOURCE / "Localization"
+    if locale_src.exists():
+        shutil.copytree(locale_src, build_out / "Localization")
+        print(f"  Copied Localization/ ({sum(1 for _ in locale_src.glob('*.json'))} language file(s))")
+
     if args.skip_deploy:
         step("Skipping deploy")
         print(f"Content build: {build_out}")
